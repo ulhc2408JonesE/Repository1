@@ -1,0 +1,189 @@
+<head>
+    <!-- META -->
+    <meta charset="utf-8" />
+    <meta name="description" content="" />
+    <meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+    <title>Rocket Elevators - Multipurpose + Admin</title>
+    <link rel="icon" href="assets/images/rocketElevators/favicon.ico" />
+
+    <!-- MOBILE SETTINGS -->
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+    <!-- WEB FONTS -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+      rel="stylesheet" type="text/css" />
+
+    <!-- CORE CSS -->
+    <link href="assets/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- REVOLUTION SLIDER -->
+    <link href="assets/plugins/slider.revolution/css/extralayers.css" rel="stylesheet" type="text/css" />
+    <link href="assets/plugins/slider.revolution/css/settings.css" rel="stylesheet" type="text/css" />
+
+    <!-- THEME CSS -->
+    <link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+    <!-- PAGE LEVEL SCRIPTS -->
+    <link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/color_scheme/yellow.css" rel="stylesheet" type="text/css" id="color_scheme" />
+  </head>
+
+<!-- HEADER -->
+      <header id="header" class="navbar-toggleable-md sticky header-md clearfix">
+        <div id="topNav">
+          <div class="container">
+            <!-- Mobile Menu Button -->
+            <button class="btn btn-mobile" data-toggle="collapse" data-target=".nav-main-collapse">
+              <i class="fa fa-bars"></i>
+            </button>
+
+            <!-- Logo -->
+            <a class="logo float-left scrollTo" href="#top">
+              <img src="assets/images/rocketElevators/rocketLogo.png" alt="" />
+            </a>
+
+            <div class="navbar-collapse collapse float-right nav-main-collapse submenu-dark">
+              <nav class="nav-main">
+                <ul id="topMain" class="nav nav-pills nav-main nav-onepage">
+                  <!-- HOME -->
+                  <li class="active">
+                    <a href="#top"> HOME </a>
+                  </li>
+                  <!-- SERVICES -->
+                  <li>
+                    <a href="#services"> SERVICES </a>
+                  </li>
+                  <!-- Portfolio -->
+                  <li>
+                    <a href="#portfolio"> Portfolio </a>
+                  </li>
+                  <!-- NEWS -->
+                  <li>
+                    <a href="#news"> NEWS </a>
+                  </li>
+                  <!-- Clients -->
+                  <li>
+                    <a href="#clients"> Clients </a>
+                  </li>
+                  <!-- Contact -->
+                  <li>
+                    <a href="#contact"> Contact </a>
+                  </li>
+                  <!-- CONTACT -->
+
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- /HEADER -->
+
+
+
+
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1"> 
+          Residential
+        </label>
+      
+
+       
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Commercial
+        </label>
+      
+
+      
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+        <label class="form-check-label" for="flexRadioDefault1">
+          Industrial
+        </label>
+      </div>
+
+      <div class="col-md-4">
+        <label for="contact:email">Elevators Required </label>
+        <input required type="email" value="" class="form-control" name="contact[email][required]"
+          id="contact:email" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="contact:email">Cost Per Unit </label>
+        <input required type="email" value="" class="form-control" name="contact[email][required]"
+          id="contact:email" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="contact:email">Installation Fees </label>
+        <input required type="email" value="" class="form-control" name="contact[email][required]"
+          id="contact:email" />
+      </div>
+
+      <div class="col-md-4">
+        <label for="contact:email">Total Cost </label>
+        <input required type="email" value="" class="form-control" name="contact[email][required]"
+          id="contact:email" />
+      </div>
+
+
+            <!-- FOOTER -->
+            <footer id="footer">
+                <div class="container">
+                  <div class="row">
+                    <!-- col #1 -->
+                    <div class="col-md-8">
+                      <h3 class="letter-spacing-1">WHY US?</h3>
+        
+                      <!-- Small Description -->
+                      <p>
+                        At Rocket Elevators, we pride ourselves on delivering unparalleled service that combines cutting-edge technology with meticulous craftsmanship. Our elevators are engineered for both safety and efficiency, ensuring a seamless experience for all users. We offer competitive pricing without compromising on quality, making us the ideal choice for businesses and residential projects alike. With a commitment to innovation and client satisfaction, Rocket Elevators stands as a beacon of excellence in the industry, ensuring that your investment is met with reliability and exceptional performance. Choose Rocket Elevators, where superior service meets unrivaled expertise.
+                      </p>
+                      <h2>(800) 123-4567</h2>
+                    </div>
+                    <!-- /col #1 -->
+        
+                    <!-- col #2 -->
+                    <div class="col-md-4">
+                      <h3 class="letter-spacing-1">KEEP IN TOUCH</h3>
+        
+                      <!-- Newsletter Form -->
+                      <p>Subscribe to Our Newsletter to get Important News & Offers</p>
+        
+                      <form class="validate" action="assets/php/newsletter.php" method="post"
+                        data-success="Subscribed! Thank you!" data-toastr-position="bottom-right">
+                        <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                          <label>
+                            <input type="email" id="email" name="email" class="form-control required"
+                              placeholder="Enter your Email" />
+                          </label>
+                          <span class="input-group-btn">
+                            <button class="btn btn-success" type="submit">
+                              Subscribe
+                            </button>
+                          </span>
+                        </div>
+                      </form>
+                      <!-- /Newsletter Form -->
+                    </div>
+                    <!-- /col #2 -->
+                  </div>
+                </div>
+        
+                <div class="copyright">
+                  <div class="container">
+                    <ul class="float-right m-0 list-inline mobile-block">
+                      <li><a href="">Terms &amp; Conditions</a></li>
+                      <li>&bull;</li>
+                      <li><a href="">Privacy</a></li>
+                    </ul>
+                    &copy; All Rights Reserved, Company LTD
+                  </div>
+                </div>
+              </footer>
+              <!-- /FOOTER -->
