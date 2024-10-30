@@ -1,7 +1,7 @@
 // Building type radio buttons
-const ResidentialButton = document.getElementById("Residential.Button")
+const ResidentialButton = document.getElementById("Residential-button")
 const CommercialButton = document.getElementById("Commercial-button")
-const IndustrialButton = document.getElementById("Industrial")
+const IndustrialButton = document.getElementById("Industrial-button")
 
 // Input fields
 const numberofapartments = document.getElementById("numberofapartments")
@@ -16,34 +16,96 @@ const excellium = document.getElementById("Excellium")
 
 
 //Final output fields
-
 const elevatorsrequired = document.getElementById("elevatorsrequired")
 const costperunit = document.getElementById("costperunit")
 const installationfees = document.getElementById("Installation Fees")
 const totalcost = document.getElementById("Total Cost")
 
 // container section
-const apartmentsofnumber = document.getElementById("apartmentsofnumber")
-const floorsofnumber = document.getElementById("numberoffloors")
-const elevatorsofnumber = document.getElementById("numberofelevators")
-const occupancymaximum = document.getElementById("maximumoccupancy")
+const apartmentsInputDiv = document.getElementById("apartmentInputDiv")
+const floorsInputDiv = document.getElementById("floorsInputDiv")
+const elevatorsInputDiv = document.getElementById("elevatorsInputDiv")
+const occupancyInputDiv = document.getElementById("occupancyInputDiv")
+
+//input section
+const apartmentInput = document.getElementById("numberofapartments")
+const floorsInput = document.getElementById("numberoffloors")
+const elevatorsInput = document.getElementById("numberofelevators")
+const occupancyInput = document.getElementById("maximumoccupancy")
 
 
 // temporarily hiding
-apartmentsofnumber.style.display = "none"
-floorsofnumber.style.display = "none"
-elevatorsofnumber.style.display = "none"
-occupancymaximum.style.display = "none"
+apartmentsInputDiv.style.display = "none"
+floorsInputDiv.style.display = "none"
+elevatorsInputDiv.style.display = "none"
+occupancyInputDiv.style.display = "none"
+
+
+
+// hide n seek
+ResidentialButton.addEventListener("click", () => {
+
+    floorsInputDiv.style.display = "block"
+    apartmentsInputDiv.style.display = "block"
+
+    occupancyInputDiv.style.display = "none"
+    elevatorsInputDiv.style.display = "none"
+
+
+})
+
+CommercialButton.addEventListener("click", () => {
+
+    occupancyInputDiv.style.display = "block"
+    floorsInputDiv.style.display = "block"
+
+    elevatorsInputDiv.style.display = "none"
+    apartmentsInputDiv.style.display = "none"
+
+
+})
+
+IndustrialButton.addEventListener("click", () => {
+
+    elevatorsInputDiv.style.display = "block"
+
+    occupancyInputDiv.style.display = "none"
+    apartmentsInputDiv.style.display = "none"
+    floorsInputDiv.style.display = "none"
+
+})
 
 
 
 
+//RESIDENTIAL MATH CALCULATE ELEVATORS
+
+//the number of apartments
+//the number of floors
+
+
+apartmentInput.addEventListener("input", () => {
+
+    //The number of apartments the user has
+    const numberOfApartments = apartmentInput.value
 
 
 
 
+})
 
-// MATH SECTION//
+// COMMERCIAL MATH 
+
+// maximum occupancy
+// the number of floors
+
+// INDUSTRIAL MATH CALCULATE ELEVATORS
+// the number of elevators
+
+
+
+
+// MATH SECTION
 // function calculateElevators(buildingType, number, floors, maxoccupancy = null)
 // let elevators;
 
