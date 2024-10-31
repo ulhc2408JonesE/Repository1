@@ -103,47 +103,82 @@ apartmentInput.addEventListener("input", () => {
 // the number of elevators
 
 
+const residentialMath = () => {
+
+    const apartmentsPerFloor = number/floors;
+    elevators = Math.ceil(aparmentsPerFloor/6)
+}
+
+
+
+
+
+
+
+// COMMERCIAL MATH
+function calculateMaximumoccupancy (const totaloccupants = maximumoccupancy * floors;)
+
+
+// INDUSTRIAL MATH
+if (buildingtype = "industrial") {
+    elevators = number;
+}
+else if (buildingtype = "residential"){
+
+}
+
 
 
 // MATH SECTION
-// function calculateElevators(buildingType, number, floors, maxoccupancy = null)
-// let elevators;
+function calculateElevators(buildingType, number, floors, maxoccupancy) {
+
+let elevators;
 
 // if (buildingtype = "industrial") {
 //     elevators = number;
 // }
-// else if (building type = "residential")
+// else if (buildingtype = "residential"){
 
-// const apartmentsPerFloor = number/floors;
-// elevators = Math.ceil(aparmentsPerFloor/6)
+// }
+
+
+
+
+
+
 // if (floors > 20){
 //     elevators *=2
 // }
-// else if (buildingtype = "commercial"){
-//     const totaloccupants = maxoccupants * floors;
-//     const elevatorsPerBank = Math.ceil (totaloccupants / 200);
-//     const elevatorsBanks = Math.ceil (floors/10)
-//     Elevators=(elevatorPerBank + 1)* elevatorsBanks
-// }
 
-// return elevators;
 
+else if (buildingtype = "commercial"){
+    const totaloccupants = maximumoccupancy * floors;
+    const elevatorsPerBank = Math.ceil (totaloccupants / 200);
+    const elevatorsBanks = Math.ceil (floors/10)
+    const Elevators=(elevatorsPerBank * elevatorsBanks) + elevatorsBanks
+}
+
+return elevators;
+
+}
 // MATH SECTION//
 
 // Math Section//
 
-// function CalculatePrice( Standard, Premium, Excelium )
+function CalculatePrice( Standard, Premium, Excelium ){
 
-// if (CalculatePrice = "standard") {
-//   let  standard = 8000
-// }
-// else if (CalculatePrice = "premium"){
-//     let premium = 12000
-// }
-// else if (calculatePrice) = "Excelium"{
-//     let Excelium= 15000
-// }
+if (CalculatePrice = "standard") {
+  let  standard = 8000
+}
+else if (CalculatePrice = "premium"){
+    let premium = 12000
+}
+else if (calculatePrice = "Excelium"){
+    let Excelium= 15000
+}
 
-// const standard = (elevatorprice*numberofelevators+8000*.1)
-// const premium = (elevatorsprice*numberofelevators+12000*.15)
-// const excelium (elevatorprice*numberofelevators)
+const standard = (elevatorprice*numberofelevators+8000*.1)
+const premium = (elevatorsprice*numberofelevators+12000*.15)
+const excelium = (elevatorprice*numberofelevators)
+
+}
