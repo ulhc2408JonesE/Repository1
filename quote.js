@@ -3,11 +3,6 @@ const ResidentialButton = document.getElementById("Residential-button")
 const CommercialButton = document.getElementById("Commercial-button")
 const IndustrialButton = document.getElementById("Industrial-button")
 
-// Input fields
-const numberofapartments = document.getElementById("numberofapartments")
-const numberoffloors = document.getElementById("numberoffloors")
-const numberofelevators = document.getElementById("numberofelevators")
-const maximumoccupancy = document.getElementById("maximumoccupancy")
 
 // Product tier radio buttons
 const standard = document.getElementById("Standard")
@@ -21,7 +16,7 @@ const costperunit = document.getElementById("costperunit")
 const installationfees = document.getElementById("Installation Fees")
 const totalcost = document.getElementById("Total Cost")
 
-// container section
+// container section 
 const apartmentsInputDiv = document.getElementById("apartmentInputDiv")
 const floorsInputDiv = document.getElementById("floorsInputDiv")
 const elevatorsInputDiv = document.getElementById("elevatorsInputDiv")
@@ -78,68 +73,80 @@ IndustrialButton.addEventListener("click", () => {
 
 
 
-//RESIDENTIAL MATH CALCULATE ELEVATORS
-
-//the number of apartments
-//the number of floors
+//GETTING HOW MANY ELEVATORS THE CUSTOMER NEEDS
 
 
-apartmentInput.addEventListener("input", () => {
-
-    //The number of apartments the user has
-    const numberOfApartments = apartmentInput.value
+//Divide the number of apartments by the number of floors to obtain the average apartments per floor
 
 
+//divide the average apartments per floor by 6 to get the number of required elevators
 
 
-})
+//divide the number of floors by 20 to get the number of elevator banks
 
-// COMMERCIAL MATH 
 
-// maximum occupancy
-// the number of floors
-
-// INDUSTRIAL MATH CALCULATE ELEVATORS
-// the number of elevators
+//multiply the elevators required by the number of banks to get the total elevators
 
 
 const residentialMath = () => {
 
-    const apartmentsPerFloor = number/floors;
-    elevators = Math.ceil(aparmentsPerFloor/6)
+    //The number of apartments the user has
+    const numberOfApartments = apartmentInput.value
+    const numberoffloors = floorsInput.value
+
+    const avgApartmentsPerFloor = Math.ceil(numberOfApartments/numberoffloors)
+    const RequiredElevators = Math.ceil(avgApartmentsPerFloor/6)
+    const ElevatorBanks = Math.ceil(numberoffloors/20)
+    const totalelevators = Math.ceil(ElevatorBanks*RequiredElevators)
+
+    //visually displaying the number to the user
+    elevatorsrequired.value = totalelevators
+    
 }
 
 
+apartmentInput.addEventListener("input", () => {
+
+    residentialMath()
+
+})
 
 
 
 
 
-// COMMERCIAL MATH
-function calculateMaximumoccupancy (const totaloccupants = maximumoccupancy * floors;)
+// If building type is commercial, multiply max occupancy per floor by number of floors to obtain total number of occupants
+
+// The number of elevators required per elevator bank is determined by dividing the total number of occupants by 200.
+
+// The number of elevators banks required is determined by dividing the nuber of floors by 10 as opposed to 20 for residential buildings. Each elevator bank must have an additional elevator for freight.
+
+// total elevators
 
 
-// INDUSTRIAL MATH
-if (buildingtype = "industrial") {
-    elevators = number;
+const commercialMath = () => {
+
+    const numberoffloors = floorsInput.value
+    const maximumoccupancy = occupancyInput.value
+
+    const totaloccupants = (maximumoccupancy*numberoffloors)
+    const RequiredElevators = (totaloccupants/200)
+    const ElevatorBanks = (numberoffloors/10 )    
+    const totalelevators = (ElevatorBanks*RequiredElevators + ElevatorBanks)
+    
+    totalelevators.value = totalelevators
 }
-else if (buildingtype = "residential"){
+floorsInput.addEventListener("input" , () => {
 
-}
+    commercialMath()
+})
+
+// ELEVATORS NEED; whatever they type into it is what thye need
 
 
 
-// MATH SECTION
-function calculateElevators(buildingType, number, floors, maxoccupancy) {
 
-let elevators;
 
-// if (buildingtype = "industrial") {
-//     elevators = number;
-// }
-// else if (buildingtype = "residential"){
-
-// }
 
 
 
@@ -151,19 +158,19 @@ let elevators;
 // }
 
 
-else if (buildingtype = "commercial"){
-    const totaloccupants = maximumoccupancy * floors;
-    const elevatorsPerBank = Math.ceil (totaloccupants / 200);
-    const elevatorsBanks = Math.ceil (floors/10)
-    const Elevators=(elevatorsPerBank * elevatorsBanks) + elevatorsBanks
-}
+// else if (buildingtype = "commercial"){
+//     const totaloccupants = maximumoccupancy * floors;
+//     const elevatorsPerBank = Math.ceil (totaloccupants / 200);
+//     const elevatorsBanks = Math.ceil (floors/10)
+//     const Elevators=(elevatorsPerBank * elevatorsBanks) + elevatorsBanks
+// }
 
-return elevators;
+// return elevators;
 
-}
-// MATH SECTION//
+// 
+// // MATH SECTION//
 
-// Math Section//
+// // Math Section//
 
 function CalculatePrice( Standard, Premium, Excelium ){
 
